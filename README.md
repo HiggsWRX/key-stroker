@@ -10,5 +10,5 @@ A ideia é um jovem que vai começando a fazer a sua propria IT company com a aj
 com a ajuda de code monkeys, hackers, etc. Tambem podia haver assets para criar scripts automaticamente e assets para os vender automaticamente, assim ja começavas
 a ganhar $dinheiro$ sem teres que fazer nada, embora no inicio do jogo por tenhas alguem para fazer os Kps por ti ainda és tu que tens que criar as cenas e vender.
 
-A ideia é essa, em vez de ser um clicker, é um "typer". Ao longo do jogo vai se tendo upgrades aos assets e até talvez ao próprio jogador, tipo,
+A ideia é portanto, em vez de ser um clicker, é um "typer". Ao longo do jogo vai se tendo upgrades aos assets e até talvez ao próprio jogador, tipo,
 cada keystroke nosso equivaleriam a 1000 ou 10000, para em qualquer fase do jogo, early, mid ou late game, incentivar a pessoa a fazer keyboard mashing.
