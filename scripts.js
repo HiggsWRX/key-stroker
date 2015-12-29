@@ -40,7 +40,7 @@ window.setInterval(function () {
         document.getElementById('store').style.visibility = 'visible';
         
         var elder = document.createElement('div');
-        elder.innerHTML = '<button id="hire-elder">Hire Elder</button><span id="elder-price">' + elderCost + '</span>';
+        elder.innerHTML = '<button id="hire-elder">x1</button> Friendly Elder $<span id="elder-price">' + elderCost + '</span> - You have <span id="num-elder">' + numElder + '</span>';
         document.getElementById('assets').appendChild(elder);
 
         // when the user buys the asset, update the number owned, its new price and deduct the cash
@@ -56,7 +56,7 @@ window.setInterval(function () {
 
     if (cash >= 100 && !kidUnlocked) {
         var kid = document.createElement('div');
-        kid.innerHTML = '<button id="hire-kid">Hire Kid</button><span id="kid-price">' + kidCost + '</span>';
+        kid.innerHTML = '<button id="hire-kid">x1</button> Kid $<span id="kid-price">' + kidCost + '</span> - You have <span id="num-kid">' + numKid + '</span>';
         document.getElementById('assets').appendChild(kid);
 
         document.getElementById('hire-kid').addEventListener('click', function (event) {
@@ -71,7 +71,7 @@ window.setInterval(function () {
 
     if (cash >= 500 && !studUnlocked) {
         var stud = document.createElement('div');
-        stud.innerHTML = '<button id="hire-stud">Hire Student</button><span id="stud-price">' + studCost + '</span>';
+        stud.innerHTML = '<button id="hire-stud">x1</button> Computer Science Student $<span id="stud-price">' + studCost + '</span> - You have <span id="num-stud">' + numStud + '</span>';
         document.getElementById('assets').appendChild(stud);
 
         document.getElementById('hire-stud').addEventListener('click', function (event) {
@@ -86,7 +86,7 @@ window.setInterval(function () {
 
     if (cash >= 3000 && !contUnlocked) {
         var cont = document.createElement('div');
-        cont.innerHTML = '<button id="hire-cont">Hire Contractor</button><span id="cont-price">' + contCost + '</span>';
+        cont.innerHTML = '<button id="hire-cont">x1</button> Outsourced Contractor $<span id="cont-price">' + contCost + '</span> - You have <span id="num-cont">' + numCont + '</span>';
         document.getElementById('assets').appendChild(cont);
 
         document.getElementById('hire-cont').addEventListener('click', function (event) {
@@ -101,7 +101,7 @@ window.setInterval(function () {
 
     if (cash >= 10000 && !champUnlocked) {
         var champ = document.createElement('div');
-        champ.innerHTML = '<button id="hire-champ">Hire champ</button><span id="champ-price">' + champCost + '</span>';
+        champ.innerHTML = '<button id="hire-champ">x1</button> World Typewritting Champion $<span id="champ-price">' + champCost + '</span> - You have <span id="num-champ">' + numChamp + '</span>';
         document.getElementById('assets').appendChild(champ);
 
         document.getElementById('hire-champ').addEventListener('click', function (event) {
@@ -116,7 +116,7 @@ window.setInterval(function () {
 
     if (cash >= 40000 && !robUnlocked) {
         var rob = document.createElement('div');
-        rob.innerHTML = '<button id="hire-rob">Hire rob</button><span id="rob-price">' + robCost + '</span>';
+        rob.innerHTML = '<button id="hire-rob">x1</button> Robot 4444P $<span id="rob-price">' + robCost + '</span> - You have <span id="num-rob">' + numRob + '</span>';
         document.getElementById('assets').appendChild(rob);
 
         document.getElementById('hire-rob').addEventListener('click', function (event) {
@@ -132,6 +132,7 @@ window.setInterval(function () {
     // disable button if cash is not enough to buy the elder
     if (elderUnlocked) {
         document.getElementById("elder-price").textContent = elderCost;
+        document.getElementById("num-elder").textContent = numElder;
         if (cash < elderCost) {
             document.getElementById("hire-elder").disabled = true;
         } else {
@@ -141,6 +142,7 @@ window.setInterval(function () {
 
     if (kidUnlocked) {
         document.getElementById("kid-price").textContent = kidCost;
+        document.getElementById("num-kid").textContent = numKid;
         if (cash < kidCost) {
             document.getElementById("hire-kid").disabled = true;
         } else {
@@ -150,6 +152,7 @@ window.setInterval(function () {
 
     if (studUnlocked) {
         document.getElementById("stud-price").textContent = studCost;
+        document.getElementById("num-stud").textContent = numStud;
         if (cash < studCost) {
             document.getElementById("hire-stud").disabled = true;
         } else {
@@ -159,6 +162,7 @@ window.setInterval(function () {
 
     if (contUnlocked) {
         document.getElementById("cont-price").textContent = contCost;
+        document.getElementById("num-cont").textContent = numCont;
         if (cash < contCost) {
             document.getElementById("hire-cont").disabled = true;
         } else {
@@ -168,6 +172,7 @@ window.setInterval(function () {
 
     if (champUnlocked) {
         document.getElementById("champ-price").textContent = champCost;
+        document.getElementById("num-champ").textContent = numChamp;
         if (cash < champCost) {
             document.getElementById("hire-champ").disabled = true;
         } else {
@@ -177,6 +182,7 @@ window.setInterval(function () {
 
     if (robUnlocked) {
         document.getElementById("rob-price").textContent = robCost;
+        document.getElementById("num-rob").textContent = numRob;
         if (cash < robCost) {
             document.getElementById("hire-rob").disabled = true;
         } else {
@@ -191,3 +197,5 @@ window.setInterval(function () {
     document.getElementById("cash").textContent = Math.floor(cash);
 
 }, 10);
+
+cash = 100000;
