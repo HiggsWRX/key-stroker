@@ -1,3 +1,5 @@
+/*jslint plusplus: true */
+
 // Variables to keep track of various things, such as
 // ammount of cash, assets unlocked, assets cost, etc
 
@@ -35,6 +37,8 @@ document.addEventListener('keyup', function (event) {
 window.setInterval(function () {
 
     if (cash >= 15 && !elderUnlocked) {
+        document.getElementById('store').style.visibility = 'visible';
+        
         var elder = document.createElement('div');
         elder.innerHTML = '<button id="hire-elder">Hire Elder</button><span id="elder-price">' + elderCost + '</span>';
         document.getElementById('assets').appendChild(elder);
@@ -64,7 +68,7 @@ window.setInterval(function () {
 
         kidUnlocked = true;
     }
-    
+
     if (cash >= 500 && !studUnlocked) {
         var stud = document.createElement('div');
         stud.innerHTML = '<button id="hire-stud">Hire Student</button><span id="stud-price">' + studCost + '</span>';
@@ -79,7 +83,7 @@ window.setInterval(function () {
 
         studUnlocked = true;
     }
-    
+
     if (cash >= 3000 && !contUnlocked) {
         var cont = document.createElement('div');
         cont.innerHTML = '<button id="hire-cont">Hire Contractor</button><span id="cont-price">' + contCost + '</span>';
@@ -94,7 +98,7 @@ window.setInterval(function () {
 
         contUnlocked = true;
     }
-    
+
     if (cash >= 10000 && !champUnlocked) {
         var champ = document.createElement('div');
         champ.innerHTML = '<button id="hire-champ">Hire champ</button><span id="champ-price">' + champCost + '</span>';
@@ -109,7 +113,7 @@ window.setInterval(function () {
 
         champUnlocked = true;
     }
-    
+
     if (cash >= 40000 && !robUnlocked) {
         var rob = document.createElement('div');
         rob.innerHTML = '<button id="hire-rob">Hire rob</button><span id="rob-price">' + robCost + '</span>';
@@ -143,7 +147,7 @@ window.setInterval(function () {
             document.getElementById("hire-kid").disabled = false;
         }
     }
-    
+
     if (studUnlocked) {
         document.getElementById("stud-price").textContent = studCost;
         if (cash < studCost) {
@@ -152,7 +156,7 @@ window.setInterval(function () {
             document.getElementById("hire-stud").disabled = false;
         }
     }
-    
+
     if (contUnlocked) {
         document.getElementById("cont-price").textContent = contCost;
         if (cash < contCost) {
@@ -161,7 +165,7 @@ window.setInterval(function () {
             document.getElementById("hire-cont").disabled = false;
         }
     }
-    
+
     if (champUnlocked) {
         document.getElementById("champ-price").textContent = champCost;
         if (cash < champCost) {
@@ -170,7 +174,7 @@ window.setInterval(function () {
             document.getElementById("hire-champ").disabled = false;
         }
     }
-    
+
     if (robUnlocked) {
         document.getElementById("rob-price").textContent = robCost;
         if (cash < robCost) {
