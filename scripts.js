@@ -1,4 +1,4 @@
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keyup', function(event) {
 	var ks_count = document.getElementById("ks-count").innerHTML;
 	var cash = parseInt(document.getElementById("current-cash").innerHTML);
 
