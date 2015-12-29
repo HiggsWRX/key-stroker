@@ -2,7 +2,7 @@ Friendly Elder - 15$
 
     Effect: +1 Kps
     
-    Description: Well you made it! You always dreamed of getting a your
+    Description: Well you made it! You always dreamed of getting your
     business, now you do. But oh boy, did all that typing make you tired?
     Well then, why not get an elder person from the local retirement home to
     help you typing out what you need! Sure they might be slow typers, but if
@@ -59,5 +59,5 @@ Robot 4444P: Intelligent Sofisticated Typer - 40,000$
     This robot will be your ultimate asset when you need some typing done.
     And by some, we mean a "typical mystery novel book" ammount of words
     typed out... in a second. Watch as this robot laughs at all your human's puny
-    atempts at typing fast.
+    attempts at typing fast.
     (Warning: Some maintenance required after a few seconds. Oil not included.)
