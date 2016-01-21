@@ -40,7 +40,7 @@ window.setInterval(function () {
         document.getElementById('store').style.visibility = 'visible';
         
         var elder = document.createElement('div');
-        elder.innerHTML = '<button id="hire-elder">x1</button> Friendly Elder $<span id="elder-price">' + elderCost + '</span> - You have <span id="num-elder">' + numElder + '</span>';
+        elder.innerHTML = '<br><a class="btn btn-primary btn-lg" id="hire-elder">Buy 1</a> Friendly Elder $<span id="elder-price">' + elderCost + '</span> - You have <span id="num-elder">' + numElder + '</span>';
         document.getElementById('assets').appendChild(elder);
 
         // when the user buys the asset, update the number owned, its new price and deduct the cash
@@ -56,7 +56,7 @@ window.setInterval(function () {
 
     if (cash >= 100 && !kidUnlocked) {
         var kid = document.createElement('div');
-        kid.innerHTML = '<button id="hire-kid">x1</button> Kid $<span id="kid-price">' + kidCost + '</span> - You have <span id="num-kid">' + numKid + '</span>';
+        kid.innerHTML = '<br><a class="btn btn-primary btn-lg" id="hire-kid">Buy 1</a> Kid $<span id="kid-price">' + kidCost + '</span> - You have <span id="num-kid">' + numKid + '</span>';
         document.getElementById('assets').appendChild(kid);
 
         document.getElementById('hire-kid').addEventListener('click', function (event) {
@@ -71,7 +71,7 @@ window.setInterval(function () {
 
     if (cash >= 500 && !studUnlocked) {
         var stud = document.createElement('div');
-        stud.innerHTML = '<button id="hire-stud">x1</button> Computer Science Student $<span id="stud-price">' + studCost + '</span> - You have <span id="num-stud">' + numStud + '</span>';
+        stud.innerHTML = '<br><a class="btn btn-primary btn-lg" id="hire-stud">Buy 1</a> Computer Science Student $<span id="stud-price">' + studCost + '</span> - You have <span id="num-stud">' + numStud + '</span>';
         document.getElementById('assets').appendChild(stud);
 
         document.getElementById('hire-stud').addEventListener('click', function (event) {
@@ -86,7 +86,7 @@ window.setInterval(function () {
 
     if (cash >= 3000 && !contUnlocked) {
         var cont = document.createElement('div');
-        cont.innerHTML = '<button id="hire-cont">x1</button> Outsourced Contractor $<span id="cont-price">' + contCost + '</span> - You have <span id="num-cont">' + numCont + '</span>';
+        cont.innerHTML = '<br><a class="btn btn-primary btn-lg" id="hire-cont">Buy 1</a> Outsourced Contractor $<span id="cont-price">' + contCost + '</span> - You have <span id="num-cont">' + numCont + '</span>';
         document.getElementById('assets').appendChild(cont);
 
         document.getElementById('hire-cont').addEventListener('click', function (event) {
@@ -101,7 +101,7 @@ window.setInterval(function () {
 
     if (cash >= 10000 && !champUnlocked) {
         var champ = document.createElement('div');
-        champ.innerHTML = '<button id="hire-champ">x1</button> World Typewritting Champion $<span id="champ-price">' + champCost + '</span> - You have <span id="num-champ">' + numChamp + '</span>';
+        champ.innerHTML = '<br><a class="btn btn-primary btn-lg" id="hire-champ">Buy 1</a> World Typewritting Champion $<span id="champ-price">' + champCost + '</span> - You have <span id="num-champ">' + numChamp + '</span>';
         document.getElementById('assets').appendChild(champ);
 
         document.getElementById('hire-champ').addEventListener('click', function (event) {
@@ -116,7 +116,7 @@ window.setInterval(function () {
 
     if (cash >= 40000 && !robUnlocked) {
         var rob = document.createElement('div');
-        rob.innerHTML = '<button id="hire-rob">x1</button> Robot 4444P $<span id="rob-price">' + robCost + '</span> - You have <span id="num-rob">' + numRob + '</span>';
+        rob.innerHTML = '<br><a class="btn btn-primary btn-lg" id="hire-rob">Buy 1</a> Robot 4444P $<span id="rob-price">' + robCost + '</span> - You have <span id="num-rob">' + numRob + '</span>';
         document.getElementById('assets').appendChild(rob);
 
         document.getElementById('hire-rob').addEventListener('click', function (event) {
