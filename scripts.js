@@ -36,7 +36,7 @@ document.addEventListener('keyup', function (event) {
 // update the UI every 10 ms
 window.setInterval(function () {
 
-    if (cash >= 15 && !elderUnlocked) {
+    if (!elderUnlocked) {
         document.getElementById('store').style.visibility = 'visible';
         
         var elder = document.createElement('div');
@@ -45,85 +45,97 @@ window.setInterval(function () {
 
         // when the user buys the asset, update the number owned, its new price and deduct the cash
         document.getElementById('hire-elder').addEventListener('click', function (event) {
-            numElder++;
-            cash -= elderCost;
-            elderCost = Math.ceil(elderCost * 1.1);
-            kps += 1;
+        	if (cash >= 15) {
+        		numElder++;
+	            cash -= elderCost;
+	            elderCost = Math.ceil(elderCost * 1.1);
+	            kps += 1;
+        	}
         });
 
         elderUnlocked = true;
     }
 
-    if (cash >= 100 && !kidUnlocked) {
+    if (!kidUnlocked) {
         var kid = document.createElement('div');
         kid.innerHTML = '<br><a class="btn btn-primary btn-lg" id="hire-kid">Buy 1</a> Kid $<span id="kid-price">' + kidCost + '</span> - You have <span id="num-kid">' + numKid + '</span>';
         document.getElementById('assets').appendChild(kid);
 
         document.getElementById('hire-kid').addEventListener('click', function (event) {
-            numKid++;
-            cash -= kidCost;
-            kidCost = Math.ceil(kidCost * 1.2);
-            kps += 5;
+        	if (cash >= 100) {
+        		numKid++;
+	            cash -= kidCost;
+	            kidCost = Math.ceil(kidCost * 1.2);
+	            kps += 5;
+        	}
         });
 
         kidUnlocked = true;
     }
 
-    if (cash >= 500 && !studUnlocked) {
+    if(!studUnlocked) {
         var stud = document.createElement('div');
         stud.innerHTML = '<br><a class="btn btn-primary btn-lg" id="hire-stud">Buy 1</a> Computer Science Student $<span id="stud-price">' + studCost + '</span> - You have <span id="num-stud">' + numStud + '</span>';
         document.getElementById('assets').appendChild(stud);
 
         document.getElementById('hire-stud').addEventListener('click', function (event) {
-            numStud++;
-            cash -= studCost;
-            studCost = Math.ceil(studCost * 1.3);
-            kps += 40;
+        	if (cash >= 500) {
+        		numStud++;
+	            cash -= studCost;
+	            studCost = Math.ceil(studCost * 1.3);
+	            kps += 40;
+        	}
         });
 
         studUnlocked = true;
     }
 
-    if (cash >= 3000 && !contUnlocked) {
+    if (!contUnlocked) {
         var cont = document.createElement('div');
         cont.innerHTML = '<br><a class="btn btn-primary btn-lg" id="hire-cont">Buy 1</a> Outsourced Contractor $<span id="cont-price">' + contCost + '</span> - You have <span id="num-cont">' + numCont + '</span>';
         document.getElementById('assets').appendChild(cont);
 
         document.getElementById('hire-cont').addEventListener('click', function (event) {
-            numCont++;
-            cash -= contCost;
-            contCost = Math.ceil(contCost * 1.2);
-            kps += 100;
+        	if (cash >= 3000){
+        		numCont++;
+	            cash -= contCost;
+	            contCost = Math.ceil(contCost * 1.2);
+	            kps += 100;
+        	}
         });
 
         contUnlocked = true;
     }
 
-    if (cash >= 10000 && !champUnlocked) {
+    if(!champUnlocked) {
         var champ = document.createElement('div');
         champ.innerHTML = '<br><a class="btn btn-primary btn-lg" id="hire-champ">Buy 1</a> World Typewritting Champion $<span id="champ-price">' + champCost + '</span> - You have <span id="num-champ">' + numChamp + '</span>';
         document.getElementById('assets').appendChild(champ);
 
         document.getElementById('hire-champ').addEventListener('click', function (event) {
-            numChamp++;
-            cash -= champCost;
-            champCost = Math.ceil(champCost * 1.2);
-            kps += 400;
+        	if (cash >= 10000) {
+	            numChamp++;
+	            cash -= champCost;
+	            champCost = Math.ceil(champCost * 1.2);
+	            kps += 400;
+	        }
         });
 
         champUnlocked = true;
     }
 
-    if (cash >= 40000 && !robUnlocked) {
+    if (!robUnlocked) {
         var rob = document.createElement('div');
         rob.innerHTML = '<br><a class="btn btn-primary btn-lg" id="hire-rob">Buy 1</a> Robot 4444P $<span id="rob-price">' + robCost + '</span> - You have <span id="num-rob">' + numRob + '</span>';
         document.getElementById('assets').appendChild(rob);
 
         document.getElementById('hire-rob').addEventListener('click', function (event) {
-            numRob++;
-            cash -= robCost;
-            robCost = Math.ceil(robCost * 1.2);
-            kps += 1000;
+        	if (cash >= 40000) {
+	            numRob++;
+	            cash -= robCost;
+	            robCost = Math.ceil(robCost * 1.2);
+	            kps += 1000;
+	        }
         });
 
         robUnlocked = true;
