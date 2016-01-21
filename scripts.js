@@ -45,7 +45,7 @@ window.setInterval(function () {
 
         // when the user buys the asset, update the number owned, its new price and deduct the cash
         document.getElementById('hire-elder').addEventListener('click', function (event) {
-        	if (cash >= 15) {
+        	if (cash >= elderCost) {
         		numElder++;
 	            cash -= elderCost;
 	            elderCost = Math.ceil(elderCost * 1.1);
@@ -62,7 +62,7 @@ window.setInterval(function () {
         document.getElementById('assets').appendChild(kid);
 
         document.getElementById('hire-kid').addEventListener('click', function (event) {
-        	if (cash >= 100) {
+        	if (cash >= kidCost) {
         		numKid++;
 	            cash -= kidCost;
 	            kidCost = Math.ceil(kidCost * 1.2);
@@ -79,7 +79,7 @@ window.setInterval(function () {
         document.getElementById('assets').appendChild(stud);
 
         document.getElementById('hire-stud').addEventListener('click', function (event) {
-        	if (cash >= 500) {
+        	if (cash >= studCost) {
         		numStud++;
 	            cash -= studCost;
 	            studCost = Math.ceil(studCost * 1.3);
@@ -96,7 +96,7 @@ window.setInterval(function () {
         document.getElementById('assets').appendChild(cont);
 
         document.getElementById('hire-cont').addEventListener('click', function (event) {
-        	if (cash >= 3000){
+        	if (cash >= contCost){
         		numCont++;
 	            cash -= contCost;
 	            contCost = Math.ceil(contCost * 1.2);
@@ -113,7 +113,7 @@ window.setInterval(function () {
         document.getElementById('assets').appendChild(champ);
 
         document.getElementById('hire-champ').addEventListener('click', function (event) {
-        	if (cash >= 10000) {
+        	if (cash >= champCost) {
 	            numChamp++;
 	            cash -= champCost;
 	            champCost = Math.ceil(champCost * 1.2);
@@ -130,7 +130,7 @@ window.setInterval(function () {
         document.getElementById('assets').appendChild(rob);
 
         document.getElementById('hire-rob').addEventListener('click', function (event) {
-        	if (cash >= 40000) {
+        	if (cash >= robCost) {
 	            numRob++;
 	            cash -= robCost;
 	            robCost = Math.ceil(robCost * 1.2);
