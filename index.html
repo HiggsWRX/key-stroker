@@ -3,20 +3,40 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
 </head>
 
 <body>
 
-    <h1>Keystrokes per second: <span id="ks-count">0</span></h1>
-    <h1>Cash: <span id="cash">0</span></h1>
+	 <nav class="navbar navbar-light bg-faded">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      			<h1>Keystrokes per second: <span id="ks-count">0</span> Cash: <span id="cash">0</span></h1>
+    		</div>
+  		</div>
+	</nav>
 
-    <h2 id="store">Store</h2>
-    <div id="assets">
+	<br>
 
+    <div class ="container" id="assets">
+    	<h2 id="store">Store</h2>
     </div>
 
 </body>
 
 <script src="scripts.js"></script>
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
 
 </html>
