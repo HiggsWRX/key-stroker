@@ -15,6 +15,9 @@ var contractor = {id: 4, name: "Outsourced Contractor", num: 0, unlocked: false,
 var champion = {id: 5, name: "World Typewritting Champion", num: 0, unlocked: false, cost: 10000, kps: 400};
 var robot = {id: 6, name: "Robot 4444P", num: 0, unlocked: false, cost: 40000, kps: 1000};
 
+//Using real times
+var before = new Date();
+
 function updateAsset(asset) {
 	if (!asset.unlocked && cash >= asset.cost) {
         document.getElementById('store').style.visibility = 'visible';
@@ -57,6 +60,8 @@ document.addEventListener('keyup', function (event) {
 
 // update the UI every 10 ms
 window.setInterval(function () {
+	now = new Date();
+    var elapsedTime = (now.getTime() - before.getTime());
 
 	updateAsset(elder);
 	updateAsset(kid);
@@ -67,9 +72,11 @@ window.setInterval(function () {
 
     document.getElementById("ks-count").textContent = kps;
 
-    cash += (kps * 1 / 100);
+    cash += (kps * elapsedTime/1000);
 
     document.getElementById("cash").textContent = Math.floor(cash);
+
+    before = now;
 
 }, 10);
 
