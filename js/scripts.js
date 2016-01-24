@@ -78,8 +78,8 @@ function updateAsset(asset) {
         assetDiv.className = 'col-md-12 border-bot';
         assetDiv.style.color = '#c9c9c9';
         assetDiv.innerHTML = '<span>' + asset.name + '</span><span class="pull-right">You have <span id="num-' + asset.id + '">' + asset.num + '</span></span>' +
-            '</br><img src="/images/' + asset.id + '.png" height="30px">&nbsp;&nbsp;&nbsp;' +
-            ' <img src="/images/dollar.png" height="20px"> <span id="' + asset.id + '-price">' + asset.cost + '</span>' +
+            '</br><img src="images/' + asset.id + '.png" height="30px">&nbsp;&nbsp;&nbsp;' +
+            ' <img src="images/dollar.png" height="20px"> <span id="' + asset.id + '-price">' + asset.cost + '</span>' +
             '<button class="btn btn-success btn-sm pull-right" id="hire-' +asset.id + '">Buy 1</button></br></br>';
 
         document.getElementById('assets-tab').appendChild(assetDiv);
