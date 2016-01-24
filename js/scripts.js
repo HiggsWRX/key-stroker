@@ -190,7 +190,7 @@ window.setInterval(function () {
 var Typer = {
     text: null,
     start: 0,
-    index: 0,
+    index: 67,
     speed: 3,
     file: "",
     init: function () {
@@ -226,7 +226,7 @@ var Typer = {
             var rts = new RegExp("\\s", "g");
             var rtt = new RegExp("\\t", "g");
             $("#console").html(text.replace(rtn, "<br/>").replace(rtt, "&nbsp;&nbsp;&nbsp;&nbsp;").replace(rts, "&nbsp;"));
-            if (count > 12) {
+            if (count > 14) {
                 $("#console").empty();
                 Typer.start = Typer.index;
                 var returnSound = new Audio("sounds/return.wav");
