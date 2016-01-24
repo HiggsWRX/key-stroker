@@ -233,4 +233,4 @@ $(document).ready(function(){
     $('[data-toggle="popover"]').popover();
 });
 
-cash = 199;
+
