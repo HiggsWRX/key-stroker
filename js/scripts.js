@@ -143,8 +143,24 @@ document.addEventListener('keyup', function (event) {
     if (event.keyCode >= 65 && event.keyCode <= 90) {
         cash++;
         Typer.addText(event);
+        var snd = new Audio("sounds/1.mp3");
+        snd.volume = .2;
+        snd.play();
     }
 });
+
+/*
+            var randomnumber = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+            var snd = keys[randomnumber];
+            snd.volume = .5;
+            snd.play();
+
+            keyCounter++;
+            if (keyCounter > 2) {
+                keyCounter = 0;
+            }
+
+*/
 
 // update the UI every 10 ms
 window.setInterval(function () {
@@ -213,6 +229,12 @@ var Typer = {
             if (count > 12) {
                 $("#console").empty();
                 Typer.start = Typer.index;
+                var returnSound = new Audio("sounds/return.wav");
+                returnSound.volume = .1;
+                returnSound.play();
+                var bellSound = new Audio("sounds/bell.wav");
+                bellSound.volume = .2;
+                setTimeout(function(){ bellSound.play(); }, 1000);
             }
         }
     },
